@@ -141,7 +141,17 @@ def write_report(df: pd.DataFrame, tables: dict[str, pd.DataFrame]) -> None:
         "",
         "## Figures",
         "",
-        "See `reports/figures/` for the full set of charts.",
+        "![Monthly revenue trend](figures/monthly_revenue_trend.png)",
+        "",
+        "![Revenue by category](figures/revenue_by_category.png)",
+        "",
+        "![Revenue by region and channel](figures/revenue_by_region_channel.png)",
+        "",
+        "![Return rate by category](figures/return_rate_by_category.png)",
+        "",
+        "![Discount impact](figures/discount_impact.png)",
+        "",
+        "More charts: run `python src/visuals.py` (see `reports/figures/`).",
     ]
     REPORT_PATH.write_text(chr(10).join(lines))
     print(f"Saved -> {REPORT_PATH}")
